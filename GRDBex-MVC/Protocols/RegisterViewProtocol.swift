@@ -6,8 +6,13 @@
 //
 
 import Foundation
+import UIKit
 
 protocol RegisterViewProtocol {
+    var firstNameField: UITextField {get}
+    
+    var lastNameField: UITextField {get}
+    
     func setController(controller: RegisterViewController)
     
     func getFirstName() -> String?

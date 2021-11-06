@@ -139,6 +139,9 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
     @objc func registerTouchUpInside() {
         self.controller?.registerPerson()
         nextButton.isHidden = false
+        
+        firstNameField.text = nil
+        lastNameField.text = nil
     }
     
     @objc func nextTouchUpInside() {
