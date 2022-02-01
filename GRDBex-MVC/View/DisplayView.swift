@@ -66,7 +66,6 @@ class DisplayView: UIView, DisplayViewProtocol {
         returnButton.addTarget(self, action: #selector(returnTouchUpInside), for: .touchUpInside)
         
         activateConstraints()
-        self.controller?.setDisplayText()
     }
     
     func setController(controller: DisplayViewController) {

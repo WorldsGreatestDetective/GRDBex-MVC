@@ -37,7 +37,7 @@ class DisplayViewController: UIViewController, UINavigationControllerDelegate {
     
     func setDisplayText() { 
         if let firstName = personModel?.firstName, let lastName = personModel?.lastName {
-            displayView?.displayLabel.text = "\(firstName)\n\(lastName)"
+            displayView!.displayLabel.text = "\(firstName)\n\(lastName)"
         }
     }
     
@@ -51,8 +51,8 @@ class DisplayViewController: UIViewController, UINavigationControllerDelegate {
         let registerViewController = RegisterViewController()
         
         if let navigationContoller = self.navigationController {
-            registerViewController.registerView?.firstNameField.text = nil
-            registerViewController.registerView?.lastNameField.text = nil
+            registerViewController.registerView!.firstNameField.text = nil
+            registerViewController.registerView!.lastNameField.text = nil
             
             navigationContoller.popViewController(animated: true)
         }

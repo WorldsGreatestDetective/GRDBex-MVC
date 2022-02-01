@@ -8,7 +8,7 @@
 import Foundation
 import GRDB
 
-struct Person: Codable, FetchableRecord, PersistableRecord, PersonModelProtocol {
+struct Person: PersonModelProtocol, Equatable, Encodable {
     var id: String
     var firstName: String
     var lastName: String
@@ -18,18 +18,28 @@ struct Person: Codable, FetchableRecord, PersistableRecord, PersonModelProtocol 
         
         return identifier
     }
+}
+
+extension Person: PersistableRecord, FetchableRecord {
+    init(row: Row) {
+        id = row["id"]
+        firstName = row["firstName"]
+        lastName = row["lastName"]
+    }
     
-    static func persistNewPerson(person: Person) {
-        do {
-            try AppDatabase.shared.dbwriter.write({ db in
-                try person.insert(db)
-            })
-        } catch {
-            fatalError("error: ")
+    static func persistNewPerson(person: PersonModelProtocol) {
+        if let person = person as? Person {
+            do {
+                try AppDatabase.shared.dbwriter.write({ db in
+                    try person.insert(db)
+                })
+            } catch {
+                fatalError("\(error)")
+            }
         }
     }
     
-    static func fetchAllPersons() -> [Person] {
+    static func fetchAllPeople() -> [PersonModelProtocol] {
         var persons: [Person] = []
         
         do {
@@ -39,7 +49,7 @@ struct Person: Codable, FetchableRecord, PersistableRecord, PersonModelProtocol 
                 persons = people
             })
         } catch {
-            fatalError("error: ")
+            fatalError("\(error)")
         }
         return persons
     }

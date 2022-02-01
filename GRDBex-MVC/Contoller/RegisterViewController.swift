@@ -4,7 +4,7 @@
 //
 //  Created by Nathan Reilly on 11/2/21.
 //
-// Make sure user cannot enter empty name 
+//  Make sure user cannot enter empty name 
 
 import UIKit
 
@@ -48,8 +48,8 @@ class RegisterViewController: UIViewController {
         if let firstName = firstNameText, let lastName = lastNameText {
             let person = Person(id: Person.setid(), firstName: firstName, lastName: lastName)
             
-            Person.persistNewPerson(person: person)
             setPersonModel(model: person)
+            Person.persistNewPerson(person: personModel!)
         }
     }
     

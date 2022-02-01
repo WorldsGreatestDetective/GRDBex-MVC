@@ -12,7 +12,7 @@ class AppDatabase {
     let dbwriter: DatabaseWriter
     var migrator: DatabaseMigrator {
         var migrator = DatabaseMigrator()
-        //migrator.eraseDatabaseOnSchemaChange = true //uncomment when implementing future changes to data models and having to create new schema as a result
+        //migrator.eraseDatabaseOnSchemaChange = true //uncomment when implementing future changes to data models and and want to DESTROY database 
         
         migrator.registerMigration("schemaChange0") { db in
             try db.create(table: "Person", body: { t in

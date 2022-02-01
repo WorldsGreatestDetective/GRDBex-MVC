@@ -8,10 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5BAD23875B713046E26D8DA6 /* Pods_GRDBex_MVC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BBFAFAECF7670221B983F72 /* Pods_GRDBex_MVC.framework */; };
+		EDAA977B88BB2957FC6BBF17 /* Pods_GRDBex_MVCTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C51B185CEA777BAF1F6F00A /* Pods_GRDBex_MVCTests.framework */; };
 		F593ED302730A8FD00A6B05A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED2F2730A8FD00A6B05A /* AppDelegate.swift */; };
 		F593ED322730A8FD00A6B05A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED312730A8FD00A6B05A /* SceneDelegate.swift */; };
 		F593ED392730A90400A6B05A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F593ED382730A90400A6B05A /* Assets.xcassets */; };
-		F593ED3C2730A90400A6B05A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F593ED3A2730A90400A6B05A /* LaunchScreen.storyboard */; };
 		F593ED47273104CF00A6B05A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED46273104CF00A6B05A /* RegisterViewController.swift */; };
 		F593ED49273104EC00A6B05A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED48273104EC00A6B05A /* Person.swift */; };
 		F593ED4D2731966B00A6B05A /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED4C2731966B00A6B05A /* RegisterView.swift */; };
@@ -22,19 +22,34 @@
 		F593ED5A2732F74300A6B05A /* DisplayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED592732F74300A6B05A /* DisplayViewController.swift */; };
 		F593ED5C2732F7B200A6B05A /* DisplayViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED5B2732F7B200A6B05A /* DisplayViewProtocol.swift */; };
 		F593ED5F2732F90900A6B05A /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED5E2732F90900A6B05A /* DisplayView.swift */; };
-		F593ED652734775C00A6B05A /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED642734775C00A6B05A /* PersonTableViewController.swift */; };
 		F593ED692734ADCA00A6B05A /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED682734ADCA00A6B05A /* PersonTableViewCell.swift */; };
+		F5D516C927851C3800732271 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516C827851C3800732271 /* ModelTests.swift */; };
+		F5D516EA27A5ED3500732271 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516E927A5ED3500732271 /* PersonTableViewController.swift */; };
+		F5D516EC27A5ED7800732271 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516EB27A5ED7800732271 /* PersonTableView.swift */; };
+		F5D516EE27A5EDF900732271 /* PersonTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		F5D516CA27851C3800732271 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F593ED242730A8FD00A6B05A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F593ED2B2730A8FD00A6B05A;
+			remoteInfo = "GRDBex-MVC";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		2221EA4220D058C5CBAE0A75 /* Pods-GRDBex-MVCTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDBex-MVCTests.debug.xcconfig"; path = "Target Support Files/Pods-GRDBex-MVCTests/Pods-GRDBex-MVCTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2BBFAFAECF7670221B983F72 /* Pods_GRDBex_MVC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRDBex_MVC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C51B185CEA777BAF1F6F00A /* Pods_GRDBex_MVCTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GRDBex_MVCTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B616D5F6CFBD9790D646187 /* Pods-GRDBex-MVC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDBex-MVC.debug.xcconfig"; path = "Target Support Files/Pods-GRDBex-MVC/Pods-GRDBex-MVC.debug.xcconfig"; sourceTree = "<group>"; };
+		850029690574ED38E8DF1824 /* Pods-GRDBex-MVCTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDBex-MVCTests.release.xcconfig"; path = "Target Support Files/Pods-GRDBex-MVCTests/Pods-GRDBex-MVCTests.release.xcconfig"; sourceTree = "<group>"; };
 		B1C9FEF28989C8DA94656E56 /* Pods-GRDBex-MVC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GRDBex-MVC.release.xcconfig"; path = "Target Support Files/Pods-GRDBex-MVC/Pods-GRDBex-MVC.release.xcconfig"; sourceTree = "<group>"; };
 		F593ED2C2730A8FD00A6B05A /* GRDBex-MVC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GRDBex-MVC.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F593ED2F2730A8FD00A6B05A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F593ED312730A8FD00A6B05A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F593ED382730A90400A6B05A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F593ED3B2730A90400A6B05A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F593ED3D2730A90400A6B05A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F593ED46273104CF00A6B05A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		F593ED48273104EC00A6B05A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
@@ -46,8 +61,12 @@
 		F593ED592732F74300A6B05A /* DisplayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewController.swift; sourceTree = "<group>"; };
 		F593ED5B2732F7B200A6B05A /* DisplayViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayViewProtocol.swift; sourceTree = "<group>"; };
 		F593ED5E2732F90900A6B05A /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
-		F593ED642734775C00A6B05A /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		F593ED682734ADCA00A6B05A /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
+		F5D516C627851C3800732271 /* GRDBex-MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GRDBex-MVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F5D516C827851C3800732271 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		F5D516E927A5ED3500732271 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
+		F5D516EB27A5ED7800732271 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
+		F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +78,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5D516C327851C3800732271 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDAA977B88BB2957FC6BBF17 /* Pods_GRDBex_MVCTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -67,6 +94,8 @@
 			children = (
 				7B616D5F6CFBD9790D646187 /* Pods-GRDBex-MVC.debug.xcconfig */,
 				B1C9FEF28989C8DA94656E56 /* Pods-GRDBex-MVC.release.xcconfig */,
+				2221EA4220D058C5CBAE0A75 /* Pods-GRDBex-MVCTests.debug.xcconfig */,
+				850029690574ED38E8DF1824 /* Pods-GRDBex-MVCTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -75,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				2BBFAFAECF7670221B983F72 /* Pods_GRDBex_MVC.framework */,
+				6C51B185CEA777BAF1F6F00A /* Pods_GRDBex_MVCTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -83,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				F593ED2E2730A8FD00A6B05A /* GRDBex-MVC */,
+				F5D516C727851C3800732271 /* GRDBex-MVCTests */,
 				F593ED2D2730A8FD00A6B05A /* Products */,
 				E6C19B62874CF905B1E02407 /* Pods */,
 				EEACB538D32683C6072FDB9F /* Frameworks */,
@@ -93,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				F593ED2C2730A8FD00A6B05A /* GRDBex-MVC.app */,
+				F5D516C627851C3800732271 /* GRDBex-MVCTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -107,7 +139,6 @@
 				F593ED312730A8FD00A6B05A /* SceneDelegate.swift */,
 				F593ED2F2730A8FD00A6B05A /* AppDelegate.swift */,
 				F593ED382730A90400A6B05A /* Assets.xcassets */,
-				F593ED3A2730A90400A6B05A /* LaunchScreen.storyboard */,
 				F593ED3D2730A90400A6B05A /* Info.plist */,
 			);
 			path = "GRDBex-MVC";
@@ -129,6 +160,7 @@
 				F593ED4C2731966B00A6B05A /* RegisterView.swift */,
 				F593ED5E2732F90900A6B05A /* DisplayView.swift */,
 				F593ED682734ADCA00A6B05A /* PersonTableViewCell.swift */,
+				F5D516EB27A5ED7800732271 /* PersonTableView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,7 +170,7 @@
 			children = (
 				F593ED46273104CF00A6B05A /* RegisterViewController.swift */,
 				F593ED592732F74300A6B05A /* DisplayViewController.swift */,
-				F593ED642734775C00A6B05A /* PersonTableViewController.swift */,
+				F5D516E927A5ED3500732271 /* PersonTableViewController.swift */,
 			);
 			path = Contoller;
 			sourceTree = "<group>";
@@ -149,8 +181,17 @@
 				F593ED532731A5F900A6B05A /* PersonModelProtocol.swift */,
 				F593ED552731A60700A6B05A /* RegisterViewProtocol.swift */,
 				F593ED5B2732F7B200A6B05A /* DisplayViewProtocol.swift */,
+				F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		F5D516C727851C3800732271 /* GRDBex-MVCTests */ = {
+			isa = PBXGroup;
+			children = (
+				F5D516C827851C3800732271 /* ModelTests.swift */,
+			);
+			path = "GRDBex-MVCTests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +216,26 @@
 			productReference = F593ED2C2730A8FD00A6B05A /* GRDBex-MVC.app */;
 			productType = "com.apple.product-type.application";
 		};
+		F5D516C527851C3800732271 /* GRDBex-MVCTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5D516CE27851C3800732271 /* Build configuration list for PBXNativeTarget "GRDBex-MVCTests" */;
+			buildPhases = (
+				73E099CC4F29A74301BF598B /* [CP] Check Pods Manifest.lock */,
+				F5D516C227851C3800732271 /* Sources */,
+				F5D516C327851C3800732271 /* Frameworks */,
+				F5D516C427851C3800732271 /* Resources */,
+				370C5FCB83C63A09D9B7AE63 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F5D516CB27851C3800732271 /* PBXTargetDependency */,
+			);
+			name = "GRDBex-MVCTests";
+			productName = "GRDBex-MVCTests";
+			productReference = F5D516C627851C3800732271 /* GRDBex-MVCTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -182,11 +243,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1300;
+				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					F593ED2B2730A8FD00A6B05A = {
 						CreatedOnToolsVersion = 13.0;
+					};
+					F5D516C527851C3800732271 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = F593ED2B2730A8FD00A6B05A;
 					};
 				};
 			};
@@ -204,6 +269,7 @@
 			projectRoot = "";
 			targets = (
 				F593ED2B2730A8FD00A6B05A /* GRDBex-MVC */,
+				F5D516C527851C3800732271 /* GRDBex-MVCTests */,
 			);
 		};
 /* End PBXProject section */
@@ -213,8 +279,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F593ED3C2730A90400A6B05A /* LaunchScreen.storyboard in Resources */,
 				F593ED392730A90400A6B05A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F5D516C427851C3800732271 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +308,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GRDBex-MVC/Pods-GRDBex-MVC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		370C5FCB83C63A09D9B7AE63 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRDBex-MVCTests/Pods-GRDBex-MVCTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GRDBex-MVCTests/Pods-GRDBex-MVCTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GRDBex-MVCTests/Pods-GRDBex-MVCTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73E099CC4F29A74301BF598B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GRDBex-MVCTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BE7E3449AC9B186E76341894 /* [CP] Check Pods Manifest.lock */ = {
@@ -270,32 +381,39 @@
 				F593ED4F27319A3200A6B05A /* AppDatabase.swift in Sources */,
 				F593ED47273104CF00A6B05A /* RegisterViewController.swift in Sources */,
 				F593ED4D2731966B00A6B05A /* RegisterView.swift in Sources */,
+				F5D516EE27A5EDF900732271 /* PersonTableViewProtocol.swift in Sources */,
 				F593ED5C2732F7B200A6B05A /* DisplayViewProtocol.swift in Sources */,
-				F593ED652734775C00A6B05A /* PersonTableViewController.swift in Sources */,
 				F593ED5127319B6200A6B05A /* Persistence.swift in Sources */,
 				F593ED302730A8FD00A6B05A /* AppDelegate.swift in Sources */,
 				F593ED5A2732F74300A6B05A /* DisplayViewController.swift in Sources */,
 				F593ED562731A60700A6B05A /* RegisterViewProtocol.swift in Sources */,
 				F593ED49273104EC00A6B05A /* Person.swift in Sources */,
+				F5D516EC27A5ED7800732271 /* PersonTableView.swift in Sources */,
 				F593ED5F2732F90900A6B05A /* DisplayView.swift in Sources */,
+				F5D516EA27A5ED3500732271 /* PersonTableViewController.swift in Sources */,
 				F593ED542731A5F900A6B05A /* PersonModelProtocol.swift in Sources */,
 				F593ED692734ADCA00A6B05A /* PersonTableViewCell.swift in Sources */,
 				F593ED322730A8FD00A6B05A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F5D516C227851C3800732271 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5D516C927851C3800732271 /* ModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		F593ED3A2730A90400A6B05A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F593ED3B2730A90400A6B05A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+/* Begin PBXTargetDependency section */
+		F5D516CB27851C3800732271 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F593ED2B2730A8FD00A6B05A /* GRDBex-MVC */;
+			targetProxy = F5D516CA27851C3800732271 /* PBXContainerItemProxy */;
 		};
-/* End PBXVariantGroup section */
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F593ED3E2730A90400A6B05A /* Debug */ = {
@@ -429,7 +547,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -458,7 +576,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -469,6 +587,46 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F5D516CC27851C3800732271 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2221EA4220D058C5CBAE0A75 /* Pods-GRDBex-MVCTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68LXY8Z6F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Partiwave.GRDBex-MVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRDBex-MVC.app/GRDBex-MVC";
+			};
+			name = Debug;
+		};
+		F5D516CD27851C3800732271 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 850029690574ED38E8DF1824 /* Pods-GRDBex-MVCTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 68LXY8Z6F4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Partiwave.GRDBex-MVCTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GRDBex-MVC.app/GRDBex-MVC";
 			};
 			name = Release;
 		};
@@ -489,6 +647,15 @@
 			buildConfigurations = (
 				F593ED412730A90400A6B05A /* Debug */,
 				F593ED422730A90400A6B05A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5D516CE27851C3800732271 /* Build configuration list for PBXNativeTarget "GRDBex-MVCTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5D516CC27851C3800732271 /* Debug */,
+				F5D516CD27851C3800732271 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
