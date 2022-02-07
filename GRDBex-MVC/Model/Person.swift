@@ -20,7 +20,7 @@ struct Person: PersonModelProtocol, Equatable, Encodable {
     }
 }
 
-extension Person: PersistableRecord, FetchableRecord {
+extension Person: PersistableRecord, FetchableRecord { // TODO: Implement stronger error handling for all db transactions
     init(row: Row) {
         id = row["id"]
         firstName = row["firstName"]
@@ -31,7 +31,7 @@ extension Person: PersistableRecord, FetchableRecord {
         if let person = person as? Person {
             do {
                 try AppDatabase.shared.dbwriter.write({ db in
-                    try person.insert(db)
+                    try! person.insert(db)
                 })
             } catch {
                 fatalError("\(error)")
@@ -44,7 +44,7 @@ extension Person: PersistableRecord, FetchableRecord {
         
         do {
             try AppDatabase.shared.dbwriter.read({ db in
-                let people = try Person.fetchAll(db)
+                let people = try! Person.fetchAll(db)
                 
                 persons = people
             })

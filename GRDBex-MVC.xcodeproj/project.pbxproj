@@ -23,7 +23,7 @@
 		F593ED5C2732F7B200A6B05A /* DisplayViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED5B2732F7B200A6B05A /* DisplayViewProtocol.swift */; };
 		F593ED5F2732F90900A6B05A /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED5E2732F90900A6B05A /* DisplayView.swift */; };
 		F593ED692734ADCA00A6B05A /* PersonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593ED682734ADCA00A6B05A /* PersonTableViewCell.swift */; };
-		F5D516C927851C3800732271 /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516C827851C3800732271 /* ModelTests.swift */; };
+		F5D516C927851C3800732271 /* AppDatabaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516C827851C3800732271 /* AppDatabaseTests.swift */; };
 		F5D516EA27A5ED3500732271 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516E927A5ED3500732271 /* PersonTableViewController.swift */; };
 		F5D516EC27A5ED7800732271 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516EB27A5ED7800732271 /* PersonTableView.swift */; };
 		F5D516EE27A5EDF900732271 /* PersonTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */; };
@@ -63,7 +63,7 @@
 		F593ED5E2732F90900A6B05A /* DisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 		F593ED682734ADCA00A6B05A /* PersonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewCell.swift; sourceTree = "<group>"; };
 		F5D516C627851C3800732271 /* GRDBex-MVCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GRDBex-MVCTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5D516C827851C3800732271 /* ModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
+		F5D516C827851C3800732271 /* AppDatabaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDatabaseTests.swift; sourceTree = "<group>"; };
 		F5D516E927A5ED3500732271 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		F5D516EB27A5ED7800732271 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewProtocol.swift; sourceTree = "<group>"; };
@@ -189,7 +189,7 @@
 		F5D516C727851C3800732271 /* GRDBex-MVCTests */ = {
 			isa = PBXGroup;
 			children = (
-				F5D516C827851C3800732271 /* ModelTests.swift */,
+				F5D516C827851C3800732271 /* AppDatabaseTests.swift */,
 			);
 			path = "GRDBex-MVCTests";
 			sourceTree = "<group>";
@@ -401,7 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D516C927851C3800732271 /* ModelTests.swift in Sources */,
+				F5D516C927851C3800732271 /* AppDatabaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

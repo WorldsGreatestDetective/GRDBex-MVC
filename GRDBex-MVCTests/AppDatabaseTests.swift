@@ -7,11 +7,11 @@
 
 import XCTest
 import GRDB
-@testable import GRDBex_MVC
+@testable import GRDBex_MVC 
 
-class ModelTests: XCTestCase {
+class AppDatabaseTests: XCTestCase {
     
-    let person = Person(id: Person.setid(), firstName: "Joe", lastName: "Shmo")
+    var person = Person(id: Person.setid(), firstName: "Joe", lastName: "Shmo")
     
     let personOne = Person(id: Person.setid(), firstName: "Peter", lastName: "Parker")
     let personTwo = Person(id: Person.setid(), firstName: "Bruce", lastName: "Wayne")
@@ -25,24 +25,42 @@ class ModelTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testPersonModelMethods() throws {
-        Person.persistNewPerson(person: person)
+    func testPersonInsert() throws {
         
-        try AppDatabase.mockShared.dbwriter.read { db in
-            let newPerson = try Person.fetchOne(db, key: person.id)
-            
-            XCTAssertEqual(person, newPerson)
-            
-            try XCTAssert(newPerson!.delete(db))
+        let dbQueue = DatabaseQueue()
+        let appDatabase = try! AppDatabase(dbwriter: dbQueue)
+        
+        try dbQueue.write { db in
+            try! person.insert(db)
+            try! XCTAssertTrue(person.exists(db))
         }
     }
+    
+    func testPersonUpdate() throws {
+        
+        let dbQueue = DatabaseQueue()
+        let appDatabase = try! AppDatabase(dbwriter: dbQueue)
+        
+        try dbQueue.write({ db in
+            try! person.insert(db)
+            person.lastName = "Deer"
+            
+            try! person.update(db)
+        })
+        
+        try dbQueue.read({ db in
+            let newPerson = try! Person.fetchOne(db, key: person.id)
+            
+            XCTAssertEqual(person, newPerson)
+        })
+    }
 
-    func testPerformanceExample() throws {
+    /*func testPerformanceExample() throws {
         // This is an example of a performance test case.
         measure {
             // Put the code you want to measure the time of here.
         }
-    }
+    }*/
 
 }
 

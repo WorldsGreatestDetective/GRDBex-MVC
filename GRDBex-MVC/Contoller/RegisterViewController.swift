@@ -4,7 +4,8 @@
 //
 //  Created by Nathan Reilly on 11/2/21.
 //
-//  Make sure user cannot enter empty name 
+//  TODO: Make sure user cannot enter empty name; present alert
+//
 
 import UIKit
 
