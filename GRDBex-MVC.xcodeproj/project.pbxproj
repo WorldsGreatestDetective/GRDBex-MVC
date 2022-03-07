@@ -27,6 +27,8 @@
 		F5D516EA27A5ED3500732271 /* PersonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516E927A5ED3500732271 /* PersonTableViewController.swift */; };
 		F5D516EC27A5ED7800732271 /* PersonTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516EB27A5ED7800732271 /* PersonTableView.swift */; };
 		F5D516EE27A5EDF900732271 /* PersonTableViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */; };
+		F5D516F027B77D8300732271 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516EF27B77D8200732271 /* NetworkManager.swift */; };
+		F5D516F227BB88DE00732271 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D516F127BB88DD00732271 /* HTTPMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		F5D516E927A5ED3500732271 /* PersonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewController.swift; sourceTree = "<group>"; };
 		F5D516EB27A5ED7800732271 /* PersonTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableView.swift; sourceTree = "<group>"; };
 		F5D516ED27A5EDF900732271 /* PersonTableViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTableViewProtocol.swift; sourceTree = "<group>"; };
+		F5D516EF27B77D8200732271 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F5D516F127BB88DD00732271 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +154,8 @@
 				F593ED48273104EC00A6B05A /* Person.swift */,
 				F593ED4E27319A3200A6B05A /* AppDatabase.swift */,
 				F593ED5027319B6200A6B05A /* Persistence.swift */,
+				F5D516EF27B77D8200732271 /* NetworkManager.swift */,
+				F5D516F127BB88DD00732271 /* HTTPMethod.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -388,9 +394,11 @@
 				F593ED5A2732F74300A6B05A /* DisplayViewController.swift in Sources */,
 				F593ED562731A60700A6B05A /* RegisterViewProtocol.swift in Sources */,
 				F593ED49273104EC00A6B05A /* Person.swift in Sources */,
+				F5D516F027B77D8300732271 /* NetworkManager.swift in Sources */,
 				F5D516EC27A5ED7800732271 /* PersonTableView.swift in Sources */,
 				F593ED5F2732F90900A6B05A /* DisplayView.swift in Sources */,
 				F5D516EA27A5ED3500732271 /* PersonTableViewController.swift in Sources */,
+				F5D516F227BB88DE00732271 /* HTTPMethod.swift in Sources */,
 				F593ED542731A5F900A6B05A /* PersonModelProtocol.swift in Sources */,
 				F593ED692734ADCA00A6B05A /* PersonTableViewCell.swift in Sources */,
 				F593ED322730A8FD00A6B05A /* SceneDelegate.swift in Sources */,

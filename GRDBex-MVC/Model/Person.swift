@@ -8,7 +8,7 @@
 import Foundation
 import GRDB
 
-struct Person: PersonModelProtocol, Equatable, Encodable {
+struct Person: PersonModelProtocol, Equatable, Encodable, Decodable {
     var id: String
     var firstName: String
     var lastName: String

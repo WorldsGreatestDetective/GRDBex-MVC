@@ -4,10 +4,12 @@
 //
 //  Created by Nathan Reilly on 1/4/22.
 //
+// TODO: Write test methods for static methods on Person and any additional db operations
+//
 
 import XCTest
 import GRDB
-@testable import GRDBex_MVC 
+@testable import GRDBex_MVC
 
 class AppDatabaseTests: XCTestCase {
     
@@ -64,8 +66,7 @@ class AppDatabaseTests: XCTestCase {
 
 }
 
-
-extension AppDatabase {
+/*extension AppDatabase {
     static let mockShared = mockMakeShared()
     
     static func mockMakeShared() -> AppDatabase {
@@ -85,5 +86,5 @@ extension AppDatabase {
         } catch {
             fatalError("\(error)")
         }
-    }
-}
+    }*/
+
