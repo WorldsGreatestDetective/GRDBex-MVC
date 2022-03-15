@@ -57,8 +57,8 @@ actor NetworkManager {
         
         let task = session.dataTask(with: request!) { data, response, error in
             do {
-                let newPeople = try! decoder.decode([String:Person].self, from: data!)
-                //people = newPeople
+                let newPeople = try! decoder.decode([Person].self, from: data!)
+                people = newPeople
             } catch {
                 print(error)
             }
