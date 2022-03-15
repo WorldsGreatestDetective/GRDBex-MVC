@@ -20,12 +20,16 @@ struct Person: PersonModelProtocol, Equatable, Encodable, Decodable {
     }
 }
 
+// MARK: - Record Type Adheherence
+
 extension Person: PersistableRecord, FetchableRecord { // TODO: Implement stronger error handling for all db transactions
     init(row: Row) {
         id = row["id"]
         firstName = row["firstName"]
         lastName = row["lastName"]
     }
+    
+    // MARK: - Person Database Transaction Methods
     
     static func persistNewPerson(person: PersonModelProtocol) {
         if let person = person as? Person {
@@ -35,6 +39,20 @@ extension Person: PersistableRecord, FetchableRecord { // TODO: Implement strong
                 })
             } catch {
                 fatalError("\(error)")
+            }
+        }
+    }
+    
+    static func persistNewPeople(people: [PersonModelProtocol]) {
+        for person in people {
+            if let person = person as? Person {
+                do {
+                    try AppDatabase.shared.dbwriter.write({ db in
+                        try! person.insert(db)
+                    })
+                } catch {
+                    fatalError("\(error)")
+                }
             }
         }
     }

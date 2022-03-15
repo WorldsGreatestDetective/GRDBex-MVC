@@ -9,6 +9,8 @@ import UIKit
 
 class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
     
+    // MARK: - View Properties
+    
     let titleLabel: UILabel = {
         let label = UILabel()
         
@@ -78,6 +80,8 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
     }()
     
     var controller: RegisterViewController?
+    
+    // MARK: - Initialization
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -104,6 +108,8 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
         addTargetsToButtons()
         activateConstraints()
     }
+    
+    // MARK: - View Methods
     
     func getFirstName() -> String? {
         if let firstName = firstNameField.text {

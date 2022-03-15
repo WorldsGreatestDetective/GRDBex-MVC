@@ -14,6 +14,8 @@ class RegisterViewController: UIViewController {
     var personModel: PersonModelProtocol?
     var registerView: RegisterViewProtocol?
     
+    let networkManager = NetworkManager(httpMethod: .GET)
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -24,6 +26,8 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         setView()
+        preformNetworkRequest()
+        print(Person.fetchAllPeople())
     }
     
     func setRegisterView(view: RegisterViewProtocol) {
@@ -51,6 +55,12 @@ class RegisterViewController: UIViewController {
             
             setPersonModel(model: person)
             Person.persistNewPerson(person: personModel!)
+        }
+    }
+    
+    func preformNetworkRequest() {
+        Task(priority: nil) {
+            Person.persistNewPeople(people: await networkManager.getAllPeople())
         }
     }
     

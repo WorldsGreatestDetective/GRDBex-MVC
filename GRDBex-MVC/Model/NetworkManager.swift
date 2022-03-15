@@ -4,57 +4,61 @@
 //
 //  Created by Nathan Reilly on 2/12/22.
 //
-//  TODO: Create and use new token for github
+//  TODO: Configure .url and .request according to corresponding HTTP method using initializer
+//
+//  TODO: Recall must remove ATS setting from info.plist after configuring backend to ATS
 //
 
 import Foundation
 
-struct NetworkManager {
+actor NetworkManager {
     var httpMethod: HTTPMethod
-    var url: String
-    var request: URLRequest
+    var url: String?
+    var request: URLRequest?
     
     let session = URLSession.shared
     
     init(httpMethod: HTTPMethod) {
         self.httpMethod = httpMethod
+        self.url = nil
+        self.request = nil
         
         switch httpMethod {
         case .PUT:
-            <#code#> // TODO: Configure .url and .request according to corresponding HTTP method
+            print("see TODO")
         case .GET:
             self.url = "http://tsgaerial.com/api/person/read.php"
-            self.request = URLRequest(url: URL(string: url)!)
+            self.request = URLRequest(url: URL(string: url!)!)
             
-            self.request.setValue("*", forHTTPHeaderField: "Access-Control-Allow-Origin")
-            self.request.setValue("application/json", forHTTPHeaderField: "Content-type")
+            self.request!.setValue("*", forHTTPHeaderField: "Access-Control-Allow-Origin")
+            self.request!.setValue("application/json", forHTTPHeaderField: "Content-type")
         case .POST:
-            <#code#>
+            print("see TODO")
         case .DELETE:
-            <#code#>
+            print("see TODO")
         default:
             break
         }
     }
     
-    func putNewPerson(person: inout PersonModelProtocol) throws {
+    func putNewPerson(person: inout PersonModelProtocol) async throws {
         // TODO: - Perhaps ensure .httpMethod is appropiate to func (guard statement?)
         
         let encoder = JSONEncoder()
         let personData = try! encoder.encode(person as? Person)
         
-        let task = session.uploadTask(with: request, from: personData)
+        let task = session.uploadTask(with: request!, from: personData)
         task.resume()
     }
     
-    func getNewPeople() -> [Person] {
+    func getAllPeople() async -> [PersonModelProtocol] {
         let decoder = JSONDecoder()
-        var people: [Person]
+        var people: [Person] = []
         
-        let task = session.dataTask(with: request) { data, response, error in
+        let task = session.dataTask(with: request!) { data, response, error in
             do {
-                let newPeople = try! decoder.decode([Person].self, from: data!)
-                people = newPeople
+                let newPeople = try! decoder.decode([String:Person].self, from: data!)
+                //people = newPeople
             } catch {
                 print(error)
             }
@@ -63,5 +67,5 @@ struct NetworkManager {
         return people
     }
     
-    // TODO: Write remaining methods according to CRUD operations
+    // TODO: Write remaining methods according to .httpMethod
 }
