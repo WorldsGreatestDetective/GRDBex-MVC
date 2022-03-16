@@ -20,6 +20,23 @@ struct Person: PersonModelProtocol, Equatable, Encodable, Decodable {
     }
 }
 
+// MARK: - JSON Decoding Support
+
+extension Person {
+    enum CodingKeys: String, CodingKey {
+        case id
+        case firstName
+        case lastName
+    }
+    
+    init(from decoder: Decoder) throws {
+        let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
+        self.id = try! valueContainer.decode(String.self, forKey: CodingKeys.id)
+        self.firstName = try! valueContainer.decode(String.self, forKey: CodingKeys.firstName)
+        self.lastName = try! valueContainer.decode(String.self, forKey: CodingKeys.lastName)
+    }
+}
+
 // MARK: - Record Type Adheherence
 
 extension Person: PersistableRecord, FetchableRecord { // TODO: Implement stronger error handling for all db transactions
