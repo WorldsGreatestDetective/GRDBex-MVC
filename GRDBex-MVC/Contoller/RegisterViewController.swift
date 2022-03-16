@@ -27,7 +27,6 @@ class RegisterViewController: UIViewController {
         
         setView()
         preformNetworkRequest()
-        print(Person.fetchAllPeople())
     }
     
     func setRegisterView(view: RegisterViewProtocol) {
