@@ -53,9 +53,6 @@ class DisplayViewController: UIViewController, UINavigationControllerDelegate {
         let registerViewController = RegisterViewController()
         
         if let navigationContoller = self.navigationController {
-            registerViewController.registerView!.firstNameField.text = nil
-            registerViewController.registerView!.lastNameField.text = nil
-            
             navigationContoller.popViewController(animated: true)
         }
     }

@@ -51,19 +51,20 @@ actor NetworkManager {
         task.resume()
     }
     
-    func getAllPeople() async -> [PersonModelProtocol] {
+    func getAllPeople() async -> [PersonModelProtocol] { // FIXME: - Fix concurrency issue with mutating people within completion handler
+        
         let decoder = JSONDecoder()
         var people: [Person] = []
         
-        let task = session.dataTask(with: request!) { data, response, error in
+        let dataTask = await session.dataTask(with: request!) { data, response, error in
             do {
-                let newPeople = try! decoder.decode(Person.self, from: data!)
-                people.append(newPeople)
+                let newPeople = try! decoder.decode([Person].self, from: data!)
+                people = newPeople
             } catch {
                 print(error)
             }
         }
-        task.resume()
+        dataTask.resume()
         return people
     }
     

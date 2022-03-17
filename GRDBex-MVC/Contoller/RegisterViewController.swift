@@ -26,7 +26,7 @@ class RegisterViewController: UIViewController {
         super.viewDidLoad()
         
         setView()
-        preformNetworkRequest()
+        remoteSync()
     }
     
     func setRegisterView(view: RegisterViewProtocol) {
@@ -57,9 +57,11 @@ class RegisterViewController: UIViewController {
         }
     }
     
-    func preformNetworkRequest() {
+    func remoteSync() {
         Task(priority: nil) {
-            Person.persistNewPeople(people: await networkManager.getAllPeople())
+            let newPeople = await networkManager.getAllPeople()
+            print(": \(newPeople)")
+            Person.persistNewPeople(people: newPeople)
         }
     }
     
