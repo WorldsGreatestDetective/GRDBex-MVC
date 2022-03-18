@@ -56,7 +56,7 @@ actor NetworkManager {
         let decoder = JSONDecoder()
         var people: [Person] = []
         
-        let dataTask = await session.dataTask(with: request!) { data, response, error in
+        let dataTask = session.dataTask(with: request!) { data, response, error in
             do {
                 let newPeople = try! decoder.decode([Person].self, from: data!)
                 people = newPeople
