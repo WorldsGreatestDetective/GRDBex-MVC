@@ -51,7 +51,7 @@ actor NetworkManager {
         task.resume()
     }
     
-    func getAllPeople() async -> [PersonModelProtocol] { // FIXME: - Fix concurrency issue with mutating people within completion handler
+    func getAllPeople() async -> [PersonModelProtocol] {
         
         let decoder = JSONDecoder()
         var people: [Person] = []
