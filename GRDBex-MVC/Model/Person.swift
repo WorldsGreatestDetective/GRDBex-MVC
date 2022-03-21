@@ -40,11 +40,11 @@ extension Person {
 // MARK: - Record Type Adheherence
 
 extension Person: PersistableRecord, FetchableRecord { // TODO: Implement stronger error handling for all db transactions
-    init(row: Row) {
+    /*init(row: Row) {
         id = row["id"]
         firstName = row["firstName"]
         lastName = row["lastName"]
-    }
+    }*/
     
     // MARK: - Person Database Transaction Methods
     
