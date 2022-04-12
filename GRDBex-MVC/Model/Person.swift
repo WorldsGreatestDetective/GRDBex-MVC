@@ -60,7 +60,7 @@ extension Person: PersistableRecord, FetchableRecord { // TODO: Implement strong
         }
     }
     
-    static func persistNewPeople(people: [PersonModelProtocol]) {
+    static func persistNewPeople(people: [PersonModelProtocol]) { // TODO: - Check for already existing id in person table
         for person in people {
             if let person = person as? Person {
                 do {

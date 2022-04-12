@@ -10,6 +10,7 @@
 //
 
 import Foundation
+import UIKit
 
 actor NetworkManager {
     var httpMethod: HTTPMethod
@@ -42,27 +43,22 @@ actor NetworkManager {
     }
     
     func putNewPerson(person: inout PersonModelProtocol) async throws {
-        // TODO: - Perhaps ensure .httpMethod is appropiate to func (guard statement?)
-        
         let encoder = JSONEncoder()
-        let personData = try! encoder.encode(person as? Person)
+        
+        let personData = try encoder.encode(person as? Person)
         
         let task = session.uploadTask(with: request!, from: personData)
         task.resume()
     }
     
-    func getAllPeople() async -> [PersonModelProtocol] {
+    func getAllPeople() async throws -> [PersonModelProtocol] {
         
         let decoder = JSONDecoder()
         var people: [Person] = []
         
-        do {
-            let (data, _) = try! await session.data(for: request!, delegate: nil)
-            let newPeople = try! decoder.decode([Person].self, from: data)
-            people = newPeople
-        } catch {
-            fatalError("\(error)")
-        }
+        let (data, _) = try await session.data(for: request!, delegate: nil)
+        let newPeople = try decoder.decode([Person].self, from: data)
+        people = newPeople
         
         return people
     }

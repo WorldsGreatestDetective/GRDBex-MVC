@@ -59,9 +59,13 @@ class RegisterViewController: UIViewController {
     
     func remoteSync() {
         Task(priority: nil) {
-            let newPeople = await networkManager.getAllPeople()
-            print(": \(newPeople)")
-            Person.persistNewPeople(people: newPeople)
+            do {
+                let newPeople = try await networkManager.getAllPeople()
+                print(newPeople)
+                Person.persistNewPeople(people: newPeople)
+            } catch {
+                registerView!.showAlertSyncFailed()
+            }
         }
     }
     

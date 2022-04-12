@@ -127,6 +127,19 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
         }
     }
     
+    func showAlertNilTextFields() { // TODO: - Rename method
+        let dismissAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+        let alertController = UIAlertController(title: "First or last name empty", message: "Make sure you enter a name for both fields", preferredStyle: .alert)
+        
+        alertController.addAction(dismissAction)
+        
+        controller!.present(alertController, animated: true, completion: nil)
+    }
+    
+    func showAlertSyncFailed() {
+        print("stuff")
+    }
+    
     func addTargetsToButtons() {
         registerButton.addTarget(self, action: #selector(registerTouchUpInside), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(nextTouchUpInside), for: .touchUpInside)
@@ -142,10 +155,17 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
         self.controller = controller
     }
     
+    // MARK: - Objective C Methods
+    
     @objc func registerTouchUpInside() {
-        self.controller?.registerPerson()
-        nextButton.isHidden = false
         
+        if firstNameField.text != nil || lastNameField.text != nil {
+            self.controller?.registerPerson()
+        } else {
+            showAlertNilTextFields()
+        }
+        
+        nextButton.isHidden = false
         firstNameField.text = nil
         lastNameField.text = nil
     }
@@ -153,6 +173,8 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
     @objc func nextTouchUpInside() {
         self.controller?.pushToDisplayVC()
     }
+    
+    // MARK: - Delegate Methods
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         if (string == " ") {

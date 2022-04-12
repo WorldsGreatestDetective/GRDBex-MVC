@@ -15,6 +15,8 @@ protocol RegisterViewProtocol {
     
     func setController(controller: RegisterViewController)
     
+    func showAlertSyncFailed()
+    
     func getFirstName() -> String?
     
     func getLastName() -> String?
