@@ -127,7 +127,7 @@ class RegisterView: UIView, RegisterViewProtocol, UITextFieldDelegate {
         }
     }
     
-    func showAlertNilTextFields() { // TODO: - Rename method
+    func showAlertNilTextFields() { // TODO: - Rename method? Move to controller
         let dismissAction = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         let alertController = UIAlertController(title: "First or last name empty", message: "Make sure you enter a name for both fields", preferredStyle: .alert)
         

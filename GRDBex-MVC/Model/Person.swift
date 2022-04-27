@@ -60,15 +60,19 @@ extension Person: PersistableRecord, FetchableRecord { // TODO: Implement strong
         }
     }
     
-    static func persistNewPeople(people: [PersonModelProtocol]) { // TODO: - Check for already existing id in person table
+    static func persistNewPeople(people: [PersonModelProtocol]) { 
+        guard let fetchedPeople = fetchAllPeople() as? [Person] else {return}
+        
         for person in people {
             if let person = person as? Person {
-                do {
-                    try AppDatabase.shared.dbwriter.write({ db in
-                        try! person.insert(db)
-                    })
-                } catch {
-                    fatalError("\(error)")
+                if fetchedPeople.contains(person) == false {
+                    do {
+                        try AppDatabase.shared.dbwriter.write({ db in
+                            try! person.insert(db)
+                        })
+                    } catch {
+                        fatalError("\(error)")
+                    }
                 }
             }
         }

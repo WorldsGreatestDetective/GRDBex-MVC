@@ -64,7 +64,7 @@ class RegisterViewController: UIViewController {
                 print(newPeople)
                 Person.persistNewPeople(people: newPeople)
             } catch {
-                registerView!.showAlertSyncFailed()
+                print("sync failed")
             }
         }
     }
